@@ -1,0 +1,904 @@
+html {
+    overflow-y: scroll;
+}
+body {
+  min-height: 1000px;
+  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Proxima Nova', sans-serif;*/
+  font-weight: 300;
+  line-height: 30px;
+  background-color: #f2f2f2;
+}
+
+strong,
+b{
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .navbar-nofixed-top{
+    margin-top: 30px;
+  }
+  .body-fixed-top{
+    padding-top: 110px;
+  }
+  .navbar-fixed-top .container{
+    padding-right: 30px;
+  }
+}
+
+p {
+  font-size: 15px;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+h1,
+h2,
+h3,
+h4{
+  color: #28abe1;
+}
+h3{
+  font-size: 22px
+}
+.navbar-default{
+  background: none;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.navbar-default .container{
+  background-color: #fff;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.navbar-fixed-top .container{
+  
+}
+.navbar-default .navbar-form {
+  border: none;
+}
+
+.row {
+  margin: 0;
+}
+
+.block,
+.menu{
+  background-color: #fff;
+}
+.block{
+  margin-bottom: 30px
+}
+.menu{
+  margin-bottom: 15px
+}
+.navbar-nav li a{
+  text-indent: -1000em;
+  padding: 0px !important;
+}
+.menu-about a{
+  background: url('/imgs/v4-menu-en.png') no-repeat 0 0;
+  background-size: 233px 92px;
+  width: 64px;
+  height: 22px;
+}
+.menu-about a:hover,
+.menu-about.active a{
+  
+  background: url('/imgs/v4-menu-en.png') no-repeat -117px 0;
+  background-size: 233px 92px;
+  width: 64px;
+  height: 23px;
+}
+
+.menu-community a{
+  background: url('/imgs/v4-menu-en.png') no-repeat 0 -23px;
+  background-size: 233px 92px;
+  width: 116px;
+  height: 23px;
+}
+
+.menu-community a:hover,
+.menu-community.active a{
+  background: url('/imgs/v4-menu-en.png') no-repeat -117px -23px;
+  background-size: 233px 92px;
+  width: 116px;
+  height: 23px;
+}
+
+.menu-partners a{
+  background: url('/imgs/v4-menu-en.png') no-repeat 0 -46px;
+  background-size: 233px 92px;
+  width: 87px;
+  height: 23px;
+}
+
+.menu-partners a:hover,
+.menu-partners.active a{
+  background: url('/imgs/v4-menu-en.png') no-repeat -117px -46px;
+  background-size: 233px 92px;
+  width: 87px;
+  height: 23px;
+}
+
+.menu-help-us a{
+  background: url('/imgs/v4-menu-en.png') no-repeat 0 -69px;
+  background-size: 233px 92px;
+  width: 77px;
+  height: 23px;
+}
+
+.menu-help-us a:hover,
+.menu-help-us.active a{
+  background: url('/imgs/v4-menu-en.png') no-repeat -117px -69px;
+  background-size: 233px 92px;
+  width: 77px;
+  height: 23px;
+}
+
+.navbar-brand{
+  background: url('/imgs/v4-common.png') no-repeat 0 0;
+  background-size: 150px 110px;
+  width: 150px;
+  height: 44px;
+  text-indent: -1000em;
+  margin: 15px 15px 15px 15px !important;
+}
+
+.news{
+  margin-bottom: 0;
+  list-style-type: none;
+  padding: 0; 
+}
+.news i{
+  width: 30px; 
+}
+.news a,
+.news a:hover,
+.news a:visited{
+  text-decoration: none;
+  color: #000
+}
+.news .date{
+  font-size: 12px;
+  display: block;
+  margin-left: 34px;
+}
+.news a .date{
+  color: #666;
+}
+.news a:hover .title,
+.news a:visited title{
+  text-decoration: underline;
+}
+.news li{
+  margin-bottom: 15px;
+}
+
+.readmore{
+  display: none;
+  text-align: left
+}
+.btn-inverted {
+  color: #fff;
+  background-color: #0D0D0D;
+  border-color: #000;
+}
+.btn-inverted:hover,
+.btn-inverted:focus,
+.btn-inverted:active,
+.btn-inverted.active,
+.open .dropdown-toggle.btn-inverted {
+  color: #ccc;
+  background-color: #0D0D0D;
+  border-color: #000;
+}
+.btn-inverted:active,
+.btn-inverted.active,
+.open .dropdown-toggle.btn-inverted {
+  background-image: none;
+}
+.btn-inverted.disabled,
+.btn-inverted[disabled],
+fieldset[disabled] .btn-inverted,
+.btn-inverted.disabled:hover,
+.btn-inverted[disabled]:hover,
+fieldset[disabled] .btn-inverted:hover,
+.btn-inverted.disabled:focus,
+.btn-inverted[disabled]:focus,
+fieldset[disabled] .btn-inverted:focus,
+.btn-inverted.disabled:active,
+.btn-inverted[disabled]:active,
+fieldset[disabled] .btn-inverted:active,
+.btn-inverted.disabled.active,
+.btn-inverted[disabled].active,
+fieldset[disabled] .btn-inverted.active {
+  background-color: #0D0D0D;
+  border-color: #000;
+}
+.btn-inverted .badge {
+  color: #0D0D0D;
+  background-color: #fff;
+}
+
+.btn-language,
+.btn-language:hover,
+.btn-language:active,
+.btn-language:focus {
+  border: none;
+  background: none;
+}
+
+.submenu{
+  padding: 0;
+}
+.submenu ul{
+  margin-bottom: 0;
+  list-style-type: none;
+  padding: 0;
+}
+.submenu ul li a{
+  display: inline-block;
+  padding: 5px 0 5px 15px;
+  color: #000;
+}
+.submenu-left{
+  padding: 0;
+  margin-bottom: 15px;
+}
+.submenu-left div{
+  background: #fff;
+}
+.submenu-middle{
+  background-color: #fff;
+  padding: 20px 30px 8px 30px;
+  margin-bottom: 15px;
+}
+.submenu-right{
+  padding: 0;
+  margin-bottom: 15px;
+}
+.submenu-right div{
+  background: #fff;
+}
+
+.submenu-right i{
+  display: inline-block;
+  width: 30px;
+}
+
+.submenu-block{
+  padding: 15px 30px;
+  margin: 0;
+}
+.icon-links {
+  list-style-type: none;
+  padding: 0 0 15px 2px;
+}
+.icon-links i {
+  display: inline-block;
+  width: 30px;
+}
+.icon-links a {
+  color: #000;
+}
+
+@media (min-width: 992px){
+  .submenu-left {
+    padding-right: 15px;
+  }
+  .submenu-right {
+    padding-left: 15px;
+  }
+  .submenu-middle .col-submit{
+    padding-left: 0px;
+  }
+}
+@media (max-width: 992px){
+  .submenu-middle {
+    padding-bottom: 10px;
+  }
+
+  .submenu-middle button{
+    margin-top: 15px;
+  }
+
+}
+
+
+/* Original by @luisrudge*/
+
+.timeline {
+    list-style: none;
+    padding: 20px 0 20px;
+    position: relative;
+}
+.timeline:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 3px;
+    background-color: #eeeeee;
+    left: 50%;
+    margin-left: -1.5px;
+}
+.timeline > li {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+    content: " ";
+    display: table;
+}
+
+.timeline > li:after {
+    clear: both;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+    content: " ";
+    display: table;
+}
+
+.timeline > li:after {
+    clear: both;
+}
+
+.timeline > li > .timeline-panel {
+    width: 46%;
+    float: left;
+    border: 1px solid #d4d4d4;
+    border-radius: 2px;
+    padding: 20px;
+    position: relative;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+.timeline > li > .timeline-panel:before {
+    position: absolute;
+    top: 26px;
+    right: -15px;
+    display: inline-block;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #ccc;
+    border-right: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+    content: " ";
+}
+
+.timeline > li > .timeline-panel:after {
+    position: absolute;
+    top: 27px;
+    right: -14px;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-left: 14px solid #fff;
+    border-right: 0 solid #fff;
+    border-bottom: 14px solid transparent;
+    content: " ";
+}
+
+.timeline > li > .timeline-badge {
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+    text-align: center;
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    margin-left: -25px;
+    background-color: #999999;
+    z-index: 100;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+}
+
+.timeline-badge.primary {
+    background-color: #2e6da4 !important;
+}
+
+.timeline-badge.success {
+    background-color: #3f903f !important;
+}
+
+.timeline-badge.warning {
+    background-color: #f0ad4e !important;
+}
+
+.timeline-badge.danger {
+    background-color: #d9534f !important;
+}
+
+.timeline-badge.info {
+    background-color: #5bc0de !important;
+}
+
+.timeline-title {
+    margin-top: 0;
+    color: inherit;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+    margin-bottom: 0;
+}
+
+.timeline-body > p + p {
+    margin-top: 5px;
+}
+
+.front-links a:hover{
+  text-decoration: none;
+  color: #000;
+}
+
+.donationlist {
+  overflow: hidden;
+  list-style-type: none;
+  margin: 30px 0;
+  padding: 0;
+}
+.donationlist li{
+  float: left;
+  width: 220px;
+  margin: 0;
+  padding: 0;
+}
+
+.language {
+  background-repeat: no-repeat !important;
+  background-position: 15px center !important; 
+  padding-left: 40px !important;
+}
+.language-ad{ background-image: url('/imgs/flag/ad.png') !important }
+.language-ae{ background-image: url('/imgs/flag/ae.png') !important }
+.language-af{ background-image: url('/imgs/flag/af.png') !important }
+.language-ag{ background-image: url('/imgs/flag/ag.png') !important }
+.language-ai{ background-image: url('/imgs/flag/ai.png') !important }
+.language-al{ background-image: url('/imgs/flag/al.png') !important }
+.language-am{ background-image: url('/imgs/flag/am.png') !important }
+.language-an{ background-image: url('/imgs/flag/an.png') !important }
+.language-ao{ background-image: url('/imgs/flag/ao.png') !important }
+.language-ar{ background-image: url('/imgs/flag/ar.png') !important }
+.language-as{ background-image: url('/imgs/flag/as.png') !important }
+.language-at{ background-image: url('/imgs/flag/at.png') !important }
+.language-au{ background-image: url('/imgs/flag/au.png') !important }
+.language-aw{ background-image: url('/imgs/flag/aw.png') !important }
+.language-ax{ background-image: url('/imgs/flag/ax.png') !important }
+.language-az{ background-image: url('/imgs/flag/az.png') !important }
+.language-ba{ background-image: url('/imgs/flag/ba.png') !important }
+.language-bb{ background-image: url('/imgs/flag/bb.png') !important }
+.language-bd{ background-image: url('/imgs/flag/bd.png') !important }
+.language-be{ background-image: url('/imgs/flag/be.png') !important }
+.language-bf{ background-image: url('/imgs/flag/bf.png') !important }
+.language-bg{ background-image: url('/imgs/flag/bg.png') !important }
+.language-bh{ background-image: url('/imgs/flag/bh.png') !important }
+.language-bi{ background-image: url('/imgs/flag/bi.png') !important }
+.language-bj{ background-image: url('/imgs/flag/bj.png') !important }
+.language-bm{ background-image: url('/imgs/flag/bm.png') !important }
+.language-bn{ background-image: url('/imgs/flag/bn.png') !important }
+.language-bo{ background-image: url('/imgs/flag/bo.png') !important }
+.language-br{ background-image: url('/imgs/flag/br.png') !important }
+.language-bs{ background-image: url('/imgs/flag/bs.png') !important }
+.language-bt{ background-image: url('/imgs/flag/bt.png') !important }
+.language-bv{ background-image: url('/imgs/flag/bv.png') !important }
+.language-bw{ background-image: url('/imgs/flag/bw.png') !important }
+.language-by{ background-image: url('/imgs/flag/by.png') !important }
+.language-bz{ background-image: url('/imgs/flag/bz.png') !important }
+.language-ca{ background-image: url('/imgs/flag/ca.png') !important }
+.language-cc{ background-image: url('/imgs/flag/cc.png') !important }
+.language-cd{ background-image: url('/imgs/flag/cd.png') !important }
+.language-cf{ background-image: url('/imgs/flag/cf.png') !important }
+.language-cg{ background-image: url('/imgs/flag/cg.png') !important }
+.language-ch{ background-image: url('/imgs/flag/ch.png') !important }
+.language-ci{ background-image: url('/imgs/flag/ci.png') !important }
+.language-ck{ background-image: url('/imgs/flag/ck.png') !important }
+.language-cl{ background-image: url('/imgs/flag/cl.png') !important }
+.language-cm{ background-image: url('/imgs/flag/cm.png') !important }
+.language-cn{ background-image: url('/imgs/flag/cn.png') !important }
+.language-co{ background-image: url('/imgs/flag/co.png') !important }
+.language-cr{ background-image: url('/imgs/flag/cr.png') !important }
+.language-cs{ background-image: url('/imgs/flag/cs.png') !important }
+.language-cu{ background-image: url('/imgs/flag/cu.png') !important }
+.language-cv{ background-image: url('/imgs/flag/cv.png') !important }
+.language-cx{ background-image: url('/imgs/flag/cx.png') !important }
+.language-cy{ background-image: url('/imgs/flag/cy.png') !important }
+.language-cz{ background-image: url('/imgs/flag/cz.png') !important }
+.language-de{ background-image: url('/imgs/flag/de.png') !important }
+.language-dj{ background-image: url('/imgs/flag/dj.png') !important }
+.language-dk{ background-image: url('/imgs/flag/dk.png') !important }
+.language-dm{ background-image: url('/imgs/flag/dm.png') !important }
+.language-do{ background-image: url('/imgs/flag/do.png') !important }
+.language-dz{ background-image: url('/imgs/flag/dz.png') !important }
+.language-ec{ background-image: url('/imgs/flag/ec.png') !important }
+.language-ee{ background-image: url('/imgs/flag/ee.png') !important }
+.language-eg{ background-image: url('/imgs/flag/eg.png') !important }
+.language-eh{ background-image: url('/imgs/flag/eh.png') !important }
+.language-en{ background-image: url('/imgs/flag/us.png') !important }
+.language-er{ background-image: url('/imgs/flag/er.png') !important }
+.language-es{ background-image: url('/imgs/flag/es.png') !important }
+.language-et{ background-image: url('/imgs/flag/et.png') !important }
+.language-fi{ background-image: url('/imgs/flag/fi.png') !important }
+.language-fj{ background-image: url('/imgs/flag/fj.png') !important }
+.language-fk{ background-image: url('/imgs/flag/fk.png') !important }
+.language-fm{ background-image: url('/imgs/flag/fm.png') !important }
+.language-fo{ background-image: url('/imgs/flag/fo.png') !important }
+.language-fr{ background-image: url('/imgs/flag/fr.png') !important }
+.language-ga{ background-image: url('/imgs/flag/ga.png') !important }
+.language-gb{ background-image: url('/imgs/flag/gb.png') !important }
+.language-gd{ background-image: url('/imgs/flag/gd.png') !important }
+.language-ge{ background-image: url('/imgs/flag/ge.png') !important }
+.language-gf{ background-image: url('/imgs/flag/gf.png') !important }
+.language-gh{ background-image: url('/imgs/flag/gh.png') !important }
+.language-gi{ background-image: url('/imgs/flag/gi.png') !important }
+.language-gl{ background-image: url('/imgs/flag/gl.png') !important }
+.language-gm{ background-image: url('/imgs/flag/gm.png') !important }
+.language-gn{ background-image: url('/imgs/flag/gn.png') !important }
+.language-gp{ background-image: url('/imgs/flag/gp.png') !important }
+.language-gq{ background-image: url('/imgs/flag/gq.png') !important }
+.language-gr{ background-image: url('/imgs/flag/gr.png') !important }
+.language-gs{ background-image: url('/imgs/flag/gs.png') !important }
+.language-gt{ background-image: url('/imgs/flag/gt.png') !important }
+.language-gu{ background-image: url('/imgs/flag/gu.png') !important }
+.language-gw{ background-image: url('/imgs/flag/gw.png') !important }
+.language-gy{ background-image: url('/imgs/flag/gy.png') !important }
+.language-hk{ background-image: url('/imgs/flag/hk.png') !important }
+.language-hm{ background-image: url('/imgs/flag/hm.png') !important }
+.language-hn{ background-image: url('/imgs/flag/hn.png') !important }
+.language-hr{ background-image: url('/imgs/flag/hr.png') !important }
+.language-ht{ background-image: url('/imgs/flag/ht.png') !important }
+.language-hu{ background-image: url('/imgs/flag/hu.png') !important }
+.language-id{ background-image: url('/imgs/flag/id.png') !important }
+.language-ie{ background-image: url('/imgs/flag/ie.png') !important }
+.language-il{ background-image: url('/imgs/flag/il.png') !important }
+.language-in{ background-image: url('/imgs/flag/in.png') !important }
+.language-io{ background-image: url('/imgs/flag/io.png') !important }
+.language-iq{ background-image: url('/imgs/flag/iq.png') !important }
+.language-ir{ background-image: url('/imgs/flag/ir.png') !important }
+.language-is{ background-image: url('/imgs/flag/is.png') !important }
+.language-it{ background-image: url('/imgs/flag/it.png') !important }
+.language-jm{ background-image: url('/imgs/flag/jm.png') !important }
+.language-jo{ background-image: url('/imgs/flag/jo.png') !important }
+.language-jp{ background-image: url('/imgs/flag/jp.png') !important }
+.language-ke{ background-image: url('/imgs/flag/ke.png') !important }
+.language-kg{ background-image: url('/imgs/flag/kg.png') !important }
+.language-kh{ background-image: url('/imgs/flag/kh.png') !important }
+.language-ki{ background-image: url('/imgs/flag/ki.png') !important }
+.language-km{ background-image: url('/imgs/flag/km.png') !important }
+.language-kn{ background-image: url('/imgs/flag/kn.png') !important }
+.language-kp{ background-image: url('/imgs/flag/kp.png') !important }
+.language-kr{ background-image: url('/imgs/flag/kr.png') !important }
+.language-kw{ background-image: url('/imgs/flag/kw.png') !important }
+.language-ky{ background-image: url('/imgs/flag/ky.png') !important }
+.language-kz{ background-image: url('/imgs/flag/kz.png') !important }
+.language-la{ background-image: url('/imgs/flag/la.png') !important }
+.language-lb{ background-image: url('/imgs/flag/lb.png') !important }
+.language-lc{ background-image: url('/imgs/flag/lc.png') !important }
+.language-li{ background-image: url('/imgs/flag/li.png') !important }
+.language-lk{ background-image: url('/imgs/flag/lk.png') !important }
+.language-lr{ background-image: url('/imgs/flag/lr.png') !important }
+.language-ls{ background-image: url('/imgs/flag/ls.png') !important }
+.language-lt{ background-image: url('/imgs/flag/lt.png') !important }
+.language-lu{ background-image: url('/imgs/flag/lu.png') !important }
+.language-lv{ background-image: url('/imgs/flag/lv.png') !important }
+.language-ly{ background-image: url('/imgs/flag/ly.png') !important }
+.language-ma{ background-image: url('/imgs/flag/ma.png') !important }
+.language-mc{ background-image: url('/imgs/flag/mc.png') !important }
+.language-md{ background-image: url('/imgs/flag/md.png') !important }
+.language-me{ background-image: url('/imgs/flag/me.png') !important }
+.language-mg{ background-image: url('/imgs/flag/mg.png') !important }
+.language-mh{ background-image: url('/imgs/flag/mh.png') !important }
+.language-mk{ background-image: url('/imgs/flag/mk.png') !important }
+.language-ml{ background-image: url('/imgs/flag/ml.png') !important }
+.language-mm{ background-image: url('/imgs/flag/mm.png') !important }
+.language-mn{ background-image: url('/imgs/flag/mn.png') !important }
+.language-mo{ background-image: url('/imgs/flag/mo.png') !important }
+.language-mp{ background-image: url('/imgs/flag/mp.png') !important }
+.language-mq{ background-image: url('/imgs/flag/mq.png') !important }
+.language-mr{ background-image: url('/imgs/flag/mr.png') !important }
+.language-ms{ background-image: url('/imgs/flag/ms.png') !important }
+.language-mt{ background-image: url('/imgs/flag/mt.png') !important }
+.language-mu{ background-image: url('/imgs/flag/mu.png') !important }
+.language-mv{ background-image: url('/imgs/flag/mv.png') !important }
+.language-mw{ background-image: url('/imgs/flag/mw.png') !important }
+.language-mx{ background-image: url('/imgs/flag/mx.png') !important }
+.language-my{ background-image: url('/imgs/flag/my.png') !important }
+.language-mz{ background-image: url('/imgs/flag/mz.png') !important }
+.language-na{ background-image: url('/imgs/flag/na.png') !important }
+.language-nc{ background-image: url('/imgs/flag/nc.png') !important }
+.language-ne{ background-image: url('/imgs/flag/ne.png') !important }
+.language-nf{ background-image: url('/imgs/flag/nf.png') !important }
+.language-ng{ background-image: url('/imgs/flag/ng.png') !important }
+.language-ni{ background-image: url('/imgs/flag/ni.png') !important }
+.language-nl{ background-image: url('/imgs/flag/nl.png') !important }
+.language-no{ background-image: url('/imgs/flag/no.png') !important }
+.language-np{ background-image: url('/imgs/flag/np.png') !important }
+.language-nr{ background-image: url('/imgs/flag/nr.png') !important }
+.language-nu{ background-image: url('/imgs/flag/nu.png') !important }
+.language-nz{ background-image: url('/imgs/flag/nz.png') !important }
+.language-om{ background-image: url('/imgs/flag/om.png') !important }
+.language-pa{ background-image: url('/imgs/flag/pa.png') !important }
+.language-pe{ background-image: url('/imgs/flag/pe.png') !important }
+.language-pf{ background-image: url('/imgs/flag/pf.png') !important }
+.language-pg{ background-image: url('/imgs/flag/pg.png') !important }
+.language-ph{ background-image: url('/imgs/flag/ph.png') !important }
+.language-pk{ background-image: url('/imgs/flag/pk.png') !important }
+.language-pl{ background-image: url('/imgs/flag/pl.png') !important }
+.language-pm{ background-image: url('/imgs/flag/pm.png') !important }
+.language-pn{ background-image: url('/imgs/flag/pn.png') !important }
+.language-pr{ background-image: url('/imgs/flag/pr.png') !important }
+.language-ps{ background-image: url('/imgs/flag/ps.png') !important }
+.language-pt{ background-image: url('/imgs/flag/pt.png') !important }
+.language-pw{ background-image: url('/imgs/flag/pw.png') !important }
+.language-py{ background-image: url('/imgs/flag/py.png') !important }
+.language-qa{ background-image: url('/imgs/flag/qa.png') !important }
+.language-re{ background-image: url('/imgs/flag/re.png') !important }
+.language-ro{ background-image: url('/imgs/flag/ro.png') !important }
+.language-rs{ background-image: url('/imgs/flag/rs.png') !important }
+.language-ru{ background-image: url('/imgs/flag/ru.png') !important }
+.language-rw{ background-image: url('/imgs/flag/rw.png') !important }
+.language-sa{ background-image: url('/imgs/flag/sa.png') !important }
+.language-sb{ background-image: url('/imgs/flag/sb.png') !important }
+.language-sc{ background-image: url('/imgs/flag/sc.png') !important }
+.language-sd{ background-image: url('/imgs/flag/sd.png') !important }
+.language-se{ background-image: url('/imgs/flag/se.png') !important }
+.language-sg{ background-image: url('/imgs/flag/sg.png') !important }
+.language-sh{ background-image: url('/imgs/flag/sh.png') !important }
+.language-si{ background-image: url('/imgs/flag/si.png') !important }
+.language-sj{ background-image: url('/imgs/flag/sj.png') !important }
+.language-sk{ background-image: url('/imgs/flag/sk.png') !important }
+.language-sl{ background-image: url('/imgs/flag/sl.png') !important }
+.language-sm{ background-image: url('/imgs/flag/sm.png') !important }
+.language-sn{ background-image: url('/imgs/flag/sn.png') !important }
+.language-so{ background-image: url('/imgs/flag/so.png') !important }
+.language-sr{ background-image: url('/imgs/flag/sr.png') !important }
+.language-st{ background-image: url('/imgs/flag/st.png') !important }
+.language-sv{ background-image: url('/imgs/flag/sv.png') !important }
+.language-sy{ background-image: url('/imgs/flag/sy.png') !important }
+.language-sz{ background-image: url('/imgs/flag/sz.png') !important }
+.language-tc{ background-image: url('/imgs/flag/tc.png') !important }
+.language-td{ background-image: url('/imgs/flag/td.png') !important }
+.language-tf{ background-image: url('/imgs/flag/tf.png') !important }
+.language-tg{ background-image: url('/imgs/flag/tg.png') !important }
+.language-th{ background-image: url('/imgs/flag/th.png') !important }
+.language-tj{ background-image: url('/imgs/flag/tj.png') !important }
+.language-tk{ background-image: url('/imgs/flag/tk.png') !important }
+.language-tl{ background-image: url('/imgs/flag/tl.png') !important }
+.language-tm{ background-image: url('/imgs/flag/tm.png') !important }
+.language-tn{ background-image: url('/imgs/flag/tn.png') !important }
+.language-to{ background-image: url('/imgs/flag/to.png') !important }
+.language-tr{ background-image: url('/imgs/flag/tr.png') !important }
+.language-tt{ background-image: url('/imgs/flag/tt.png') !important }
+.language-tv{ background-image: url('/imgs/flag/tv.png') !important }
+.language-tw{ background-image: url('/imgs/flag/tw.png') !important }
+.language-tz{ background-image: url('/imgs/flag/tz.png') !important }
+.language-ua{ background-image: url('/imgs/flag/ua.png') !important }
+.language-ug{ background-image: url('/imgs/flag/ug.png') !important }
+.language-um{ background-image: url('/imgs/flag/um.png') !important }
+.language-us{ background-image: url('/imgs/flag/us.png') !important }
+.language-uy{ background-image: url('/imgs/flag/uy.png') !important }
+.language-uz{ background-image: url('/imgs/flag/uz.png') !important }
+.language-va{ background-image: url('/imgs/flag/va.png') !important }
+.language-vc{ background-image: url('/imgs/flag/vc.png') !important }
+.language-ve{ background-image: url('/imgs/flag/ve.png') !important }
+.language-vg{ background-image: url('/imgs/flag/vg.png') !important }
+.language-vi{ background-image: url('/imgs/flag/vi.png') !important }
+.language-vn{ background-image: url('/imgs/flag/vn.png') !important }
+.language-vu{ background-image: url('/imgs/flag/vu.png') !important }
+.language-wf{ background-image: url('/imgs/flag/wf.png') !important }
+.language-ws{ background-image: url('/imgs/flag/ws.png') !important }
+.language-ye{ background-image: url('/imgs/flag/ye.png') !important }
+.language-yt{ background-image: url('/imgs/flag/yt.png') !important }
+.language-za{ background-image: url('/imgs/flag/za.png') !important }
+.language-zm{ background-image: url('/imgs/flag/zm.png') !important }
+.language-zw{ background-image: url('/imgs/flag/zw.png') !important }
+
+@media (max-width: 1200px) {
+
+    .dave-photo{
+      background: url('/imgs/v5-team.jpg') no-repeat 0 0;
+    }
+    .gawin-photo{
+      background: url('/imgs/v5-team.jpg') no-repeat -200px 0;
+    }
+    .tomas-photo{
+      background: url('/imgs/v5-team.jpg') no-repeat -400px 0;
+    }
+    .sunny-photo{
+      background: url('/imgs/v5-team.jpg') no-repeat -600px 0;
+    }
+    .teammember-photo{
+      background-size: 800px 200px;
+      width: 200px;
+      height: 230px;
+      padding-top: 215px;
+    }
+}
+@media (min-width: 1200px) {
+    .dave-photo{
+      background: url('/imgs/v5-team.jpg') no-repeat 0 0;
+    }
+    .gawin-photo{
+      background: url('/imgs/v5-team.jpg') no-repeat -250px 0;
+    }
+    .tomas-photo{
+      background: url('/imgs/v5-team.jpg') no-repeat -500px 0;
+    }
+    .sunny-photo{
+      background: url('/imgs/v5-team.jpg') no-repeat -750px 0;
+    }
+    .teammember-photo{
+      width: 250px;
+      height: 280px;
+      padding-top: 265px;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-toggle{
+      margin-top: 20px;
+    }
+    .navbar-nav li a{
+      margin: 15px;
+    }
+    ul.timeline:before {
+        left: 40px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        width: calc(100% - 90px);
+        width: -moz-calc(100% - 90px);
+        width: -webkit-calc(100% - 90px);
+    }
+
+    ul.timeline > li > .timeline-badge {
+        left: 15px;
+        margin-left: 0;
+        top: 16px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        float: right;
+    }
+
+    ul.timeline > li > .timeline-panel:before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+    }
+
+    ul.timeline > li > .timeline-panel:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+      margin-left: 15px
+    }
+    .navbar-nav li{
+      margin: 10px 0 0 0;
+    }
+
+    .navbar-nav li a{
+      margin: 15px 10px;
+    }
+    .navbar-right{
+      margin-top: 20px;
+    }
+}
+@media (min-width: 992px) {
+    .navbar-nav {
+      margin-left: 30px
+    }
+    .navbar-nav li{
+      margin: 10px 15px 0 0;
+    }
+
+    .navbar-nav li a{
+      margin: 15px;
+    } 
+}
+.tumblr_posts{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.tumblr_post{
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 30px;
+  margin-bottom: 30px
+}
+
+@media (min-width:768px){
+  .timeline{
+    padding-top: 160px;
+    margin-top: 60px;
+  }
+  .timeline li{
+    margin-top: -180px;
+  }
+}
+
+@media (max-width: 992px){
+  .video-sidebar{
+    height: auto;
+    padding: 15px 30px ;
+  }
+  .video-full{
+    width: 100%;
+    height: 380px;
+  }
+  .timeline-photo{
+    width: 100%;
+  }
+}
+
+@media (min-width:992px) and (max-width: 1200px){
+  .video-sidebar h2{
+    display: none;
+  }
+  .video-sidebar{
+    height: 380px;
+  }
+  .video-sidebar p{
+    margin-top: 15px;
+    font-size: 11px;
+  }
+  .video-full{
+    width: 675px;
+    height: 380px;
+  }
+  .timeline-photo{
+    width: 378px;
+  }
+}
+@media (min-width: 1200px) {
+  .video-sidebar{
+    height: 464px;
+  }
+  .video-full{
+    width: 850px;
+    height: 464px;
+    margin-left: -15px;
+  }
+}
+
+.stripe-errors{
+  color: red
+}

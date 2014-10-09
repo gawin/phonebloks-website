@@ -1,0 +1,25 @@
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" id="navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">{{ t["NAV_TOGGLE"] }}</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand logo" href='{{ "/" .. language }}'>{{ t["LOGO_ALT"] }}</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class='menu-about {{ menuActive(page, "about") }}'><a href='{{ "/" .. language .. "/about" }}'>{{ t["MENU_ABOUT"] }}</a></li>
+            <li class='menu-community {{ menuActive(page, "community") }}'><a href="//community.phonebloks.com">{{ t["MENU_COMMUNITY"] }}</a></li>
+            <li class='menu-partners {{ menuActive(page, "partners") }}'><a href='{{ "/" .. language .. "/partners" }}'>{{ t["MENU_PARTNERS"] }}</a></li>
+            <li class='menu-help-us {{ menuActive(page, "help-us") }}'><a href='{{ "/" .. language .. "/help-us" }}'>{{ t["MENU_HELPUS"] }}</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" role="form">
+            <a href='{{ "/" .. language .. "/donate" }}' class="btn btn-inverted" role="button">{{ t["MENU_DONATE"] }}</a>
+          </form>
+        </div>
+      </div>
+    </div>
