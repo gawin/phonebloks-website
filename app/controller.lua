@@ -1,5 +1,5 @@
 -- load our template engine
-local tirtemplate = require 'tirtemplate'
+local template = require 'template'
 
 local cjson = require 'cjson'
 local os = require 'os'
@@ -32,7 +32,7 @@ end
 
 -- /index
 local function render_page(url_language, url_page)
-    local page = tirtemplate.tload('layouts/layout.html')
+    local page = template.tload('layouts/layout.html')
     local translation = cjson.decode( readFile( ngx.var.root .. "/app/locale/" .. url_language .. ".json" ) )
     local locales = { language = url_language, page = url_page, t = translation }
 
@@ -46,7 +46,7 @@ function table.set(t) -- set of list
   return u
 end
 
-local allowed_languages = table.set { "en", "nl", "cn"}
+local allowed_languages = table.set { "en", "nl"}
 local allowed_pages     = table.set { "about", "donate", "partners","index", "faq", "newsletter", "contact", "help-us"}
 local url_language      = string.sub(ngx.var.uri, 2, 3)
 local url_page          = string.sub(ngx.var.uri, 5)
