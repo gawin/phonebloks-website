@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='{{ url_language }}'>
   <head>
     <title>{{ t["PAGE_TITLE"] }}</title>
     <meta charset='utf-8'>
@@ -53,6 +53,7 @@
     
   </head>
   <body class="body-fixed-top">
+{( "common/dialog.html" )}
 {( "common/navbar.html" )}
 {( page .. ".html" )}
 {( "common/footer.html" )}

@@ -6,10 +6,10 @@
         <div class="col-md-8">
           <h2>{{ t["DONATE_REASON_TITLE"] }}</h2>
           <p>{{ t["DONATE_REASON_CONTENT"] }}</p>
-          <p>Please choose your prefered payment type:</p>
+          <p>{{ t["DONTATE_PAYMENT_TYPE"] }}:</p>
           <p class='support-options' style="margin: 30px 0">
-            <button id="chooseStripe" type="button" class="btn btn-default">Credit Card</button>&nbsp;&nbsp;
-            <button id="choosePaypal" type="button" class="btn btn-default">PayPal</button>
+            <button id="chooseStripe" type="button" class="btn btn-default">{{ t["DONTATE_PAYMENT_CREDITCARD"] }}</button>&nbsp;&nbsp;
+            <button id="choosePaypal" type="button" class="btn btn-default">{{ t["DONTATE_PAYMENT_PAYPAL"] }}</button>
           </p>
 
           <div id="stripeForm" class="well card" style="display:none">
@@ -24,7 +24,7 @@
               
 
               <div class="form-group">
-                <label for="name" class="col-sm-3 control-label">Cardholder's Name:</label>
+                <label for="name" class="col-sm-3 control-label">{{ t["DONATE_CREDITCARD_NAME"] }}:</label>
                 <div class="col-sm-6">
                   <input type="text" class="form-control" size="20" maxlength="50" id="name" data-stripe="name"/>
                 </div>
@@ -32,7 +32,7 @@
               </div>
 
               <div class="form-group">
-                <label for="number" class="col-sm-3 control-label">Card Number:</label>
+                <label for="number" class="col-sm-3 control-label">{{ t["DONATE_CREDITCARD_NO"] }}:</label>
                 <div class="col-sm-6">
                   <input type="text" class="form-control" size="20" maxlength="20" id="number" data-stripe="number"/>
                 </div>
@@ -40,7 +40,7 @@
               </div>
 
               <div class="form-group">
-                <label id="month" data-stripe="name" for="number" class="col-sm-3 control-label">Expiration Date:</label>
+                <label id="month" data-stripe="name" for="number" class="col-sm-3 control-label">{{ t["DONATE_CREDITCARD_EXP_DATE"] }}:</label>
                 <div class="col-sm-2">
                   <select name="month" class="form-control" title="Month" id="month" data-stripe="exp-month">
                     <option value="01" selected="selected">01</option>
@@ -90,7 +90,7 @@
               </div>
                 
               <div class="form-group">
-                <label for="cvc" class="col-sm-3 control-label">Security code (CVC):</label>
+                <label for="cvc" class="col-sm-3 control-label">{{ t["DONATE_CREDITCARD_CVC"] }}:</label>
                 <div class="col-sm-6">
                   <input type="text" class="form-control" size="4" maxlength="4" id="cvc" data-stripe="cvc"/>
                 </div>
@@ -102,7 +102,7 @@
 
           <div id="paypalForm" class="well card card-paypal" style="display:none">
             <p class="text-center"><img src="/imgs/v4-paypal.png" alt="paypal" style="margin: 30px"></p>
-            <p class="text-center">After completion of the form below you will be redirected to PayPal.</p>
+            <p class="text-center">{{ t["DONATE_PAYPAL"] }}</p>
             <form name="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="display:none">
               <input type="hidden" name="cmd" value="_s-xclick">
               <input type="hidden" name="hosted_button_id" value="6PLRSC29NT9KN">
@@ -113,27 +113,26 @@
 
           <div id="donationForm" class="well card donation-form" style="display:none">
             <form class="form-horizontal" role="form" name="donation" action="/api/donation/donate" method="POST" id="donation">
-              <p>We will not publish the contribution amount due to privacy concerns. Would you like your name to be added to the contributers list?</p>
-
+              <p>{{ t["DONATE_PUBLISH"] }}</p>
               <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-9">
                   <div class="radio">
                     <label>
                       <input type="radio" name="public" id="no" value="no" checked>
-                      No, anonymous
+                      {{ t["DONATE_PUBLISH_NO"] }}
                     </label>
                   </div>
                   <div class="radio">
                     <label>
                       <input type="radio" name="public" id="yes" value="yes" >
-                      Yes, publish my name
+                      {{ t["DONATE_PUBLISH_YES"] }}
                     </label>
                   </div>
                 </div>
               </div>
 
               <div class="form-group">
-                <label data-stripe="name" for="publicName" class="col-sm-3 control-label">Public Name:</label>
+                <label data-stripe="name" for="publicName" class="col-sm-3 control-label">{{ t["DONATE_PUBLIC_NAME"] }}:</label>
                 <div class="col-sm-6">
                   <input type="text" class="form-control" size="20" maxlength="50" name="publicName" id="publicName"/>
                 </div>
@@ -141,7 +140,7 @@
               </div>
 
               <div class="form-group">
-                <label data-stripe="name" for="email" class="col-sm-3 control-label">Email address:</label>
+                <label data-stripe="name" for="email" class="col-sm-3 control-label">{{ t["DONATE_EMAIL"] }}:</label>
                 <div class="col-sm-6">
                   <input type="text" class="form-control" size="20" maxlength="255" name="email" id="email"/>
                 </div>
@@ -149,7 +148,7 @@
               </div>
 
               <div class="form-group">
-                <label data-stripe="name" for="amount" class="col-sm-3 control-label">Amount:</label>
+                <label data-stripe="name" for="amount" class="col-sm-3 control-label">{{ t["DONATE_AMOUNT"] }}:</label>
                 <div class="col-sm-2">
                   <select class="form-control" title="currency" id="currency" name="currency">
                     <option value="USD">USD</option>
@@ -166,7 +165,7 @@
               <input type="hidden" name="provider" value="stripe">
               <div class="form-group" style="margin-top:30px;">
                 <div class="col-sm-offset-3 col-sm-9">
-                  <button type="submit" class="btn btn-inverted" id="processDonation">Make Donation</button>
+                  <button type="submit" class="btn btn-inverted" id="processDonation">{{ t["DONATE_SEND"] }}</button>
                 </div>
               </div>
 
@@ -193,632 +192,8 @@
     <div class="row">
       <div class="col-md-12">
           <ul class="donationlist">
-<li>Furkan</li>
-<li>Cédric Ringenbach</li>
-<li>Hartmut Esslinger</li>
-<li>D Friend</li>
-<li>Peter Nyström</li>
-<li>A.R. Keat</li>
-<li>Louison Jean-François</li>
-<li>Sergey V. Babaev</li>
-<li>Luca D'Amario</li>
-<li>ATELIER 1912 </li>
-<li>Julien BOUCHAREINE</li>
-<li>Arnaud LE BOT</li>
-<li>Barry Ronayne</li>
-<li>Bea</li>
-<li>Морунов Олег</li>
-<li>Coty Rueda </li>
-<li>nishant dholakia</li>
-<li>Lucas Moran</li>
-<li>Kevin Faul</li>
-<li>Peeter Rannou</li>
-<li>Felix Mengeringhausen</li>
-<li>Sebastian</li>
-<li>Nicholas F Lord</li>
-<li>Manabu Kato</li>
-<li>Amin Zulkifli</li>
-<li>Total Phase inc.</li>
-<li>Marvin Smith</li>
-<li>|Commandant|</li>
-<li>aajaji mohammed</li>
-<li>Marie Lagström </li>
-<li>Malsa jeremy</li>
-<li>Oscar Georg Lundberg</li>
-<li>Filip Marčák</li>
-<li>Zanolino Chloé</li>
-<li>Albinou</li>
-<li>Antoine Malzac</li>
-<li>Sehaj Sethi</li>
-<li>Raghuveer Thullibilli</li>
-<li>Jason Karuza</li>
-<li>leaman</li>
-<li>Ivar van Diermen</li>
-<li>Giacomo Giulietti</li>
-<li>De Raats</li>
-<li>Andrea Guzzoni</li>
-<li>Alexandre THOINET</li>
-<li>Kasper kristensen @HTX</li>
-<li>SStraub</li>
-<li>Sofie Nissen</li>
-<li>Lan Luu</li>
-<li>Rodrigo Valdez</li>
-<li>Paul Merritt</li>
-<li>Noah Ratzan</li>
-<li>Michael J</li>
-<li>Michel Lemay</li>
-<li>Markos Markou</li>
-<li>Vojtech Karas</li>
-<li>Gregory Burns</li>
-<li>Gustav Gillund</li>
-<li>Rob Waters</li>
-<li>Eduardo Tejada</li>
-<li>Yazeed Ibraheem Al-Oqaily</li>
-<li>Daniel Wren</li>
-<li>Aaron Cox</li>
-<li>Mudit Dalmia</li>
-<li>MyoungJae Jung</li>
-<li>Rebecca Rydberg</li>
-<li>Luka Drofenik</li>
-<li>Simen-Andreas Gjerde</li>
-<li>Rohan Moore</li>
-<li>Joshua-Ray Elsier</li>
-<li>Gavin Farrington</li>
-<li>Dantem Tselev</li>
-<li>Masahiko Akaza</li>
-<li>Jude Brading</li>
-<li>Chris Jackson</li>
-<li>Thomas</li>
-<li>Takao Nakama</li>
-<li>Tina</li>
-<li>timothee coquatrix</li>
-<li>thibaud huson</li>
-<li>Markus</li>
-<li>Sandrine Poilpre</li>
-<li>Philippe Sauter</li>
-<li>Nicolas Mothiron</li>
-<li>Michal Klučka</li>
-<li>Mattias</li>
-<li>G. Dapper</li>
-<li>Joachim</li>
-<li>Gianfranco Gaudiano</li>
-<li>Gaspard BUFFET</li>
-<li>Frank Tsgoe Amsterdam</li>
-<li>De La Fuente Céline</li>
-<li>João Junior</li>
-<li>Leo Ørsnes, Zeekoo</li>
-<li>wesleyh</li>
-<li>Vishal Ponnamaneni</li>
-<li>Dan Tortelli</li>
-<li>Steven Fraser</li>
-<li>Sonny Lee</li>
-<li>Peter Bruinooge</li>
-<li>Scott Jackson</li>
-<li>Saager Mhatre</li>
-<li>Ronny Bustos</li>
-<li>Alex Fort</li>
-<li>Nils Ánte - Norway</li>
-<li>Ivan Neskorodiev</li>
-<li>Mauricio Colombo</li>
-<li>Lingam Praveer</li>
-<li>Leonardo Hinojosa</li>
-<li>lavatseng</li>
-<li>Juan Rincon</li>
-<li>James Orduno</li>
-<li>John To</li>
-<li>dhook</li>
-<li>Jasmin</li>
-<li>Evan B</li>
-<li>Evan James Risto</li>
-<li>dogwong</li>
-<li>Darya Halkouskaya</li>
-<li>Anton Alenko</li>
-<li>Rusion</li>
-<li>Antonio Quiroz</li>
-<li>Henry Alex Fiorentini</li>
-<li>Alex Nainer</li>
-<li>Juragan Lukman</li>
-<li>Jens Anton Højgaard</li>
-<li>Jeppe Frost</li>
-<li>Enrique</li>
-<li>Victor Le Nagard</li>
-<li>THIBAUD MANGEOT</li>
-<li>SOSTENE</li>
-<li>Ruben Smit</li>
-<li>qgi</li>
-<li>Paul Doorn</li>
-<li>Shadi Darzeidan</li>
-<li>Olivier Fournier</li>
-<li>Maëlle B</li>
-<li>Lukáš Zobal</li>
-<li>iszlai levente</li>
-<li>baptiste fortin</li>
-<li>MARTIN Vivien</li>
-<li>Vaida Daniel</li>
-<li>Bastian</li>
-<li>Prevost - Mahmourian</li>
-<li>Fernandez Anthony</li>
-<li>andrea salvadorini</li>
-<li>Alan Boursier</li>
-<li>Jim frederick</li>
-<li>Anastasiya</li>
-<li>Nande Lopez</li>
-<li>Mike Maltos</li>
-<li>Florian Kromer</li>
-<li>Joe Tarrant</li>
-<li>Jahvar Bennett</li>
-<li>Talon</li>
-<li>Gabriel Koeche</li>
-<li>Kyle Jacobs</li>
-<li>Elijah Mitchell Jordan</li>
-<li>Arseny Ratner</li>
-<li>Alexandre Henry</li>
-<li>Abk Khan</li>
-<li>Christopher Scholz</li>
-<li>Hampsterking</li>
-<li>Luc Georgel</li>
-<li>Christopher Lunt</li>
-<li>Thomas Flament</li>
-<li>Alex Barman</li>
-<li>Samuel Brekke</li>
-<li>Srinivas</li>
-<li>manOFstills</li>
-<li>Max Schroeder</li>
-<li>Martin Keune</li>
-<li>Ortreum</li>
-<li>Al Sterchele</li>
-<li>DUVAL ROMAIN</li>
-<li>Mondo Baumgartner</li>
-<li>Mitrimo</li>
-<li>Cyso.com</li>
-<li>Francesco Liardo</li>
-<li>Basile</li>
-<li>Jorge Barrio Pereda</li>
-<li>Osmar Flores</li>
-<li>Remy Armstrong</li>
-<li>Issac Lui</li>
-<li>Ilkin Hidayev</li>
-<li>Fill Jared</li>
-<li>Justin Pickens </li>
-<li>Graeme Haddon</li>
-<li>Tim Johnston</li>
-<li>Thibaut TSCHOFEN</li>
-<li>Riley Lundquist</li>
-<li>CAILLOT Nicolas</li>
-<li>Alex Apalenis</li>
-<li>Michael Lowe</li>
-<li>Nicole </li>
-<li>Maximilian Werland</li>
-<li>jimfred</li>
-<li>Gregory Annas</li>
-<li>Frederic Seraphine</li>
-<li>fahad alhumaidi</li>
-<li>Brasim</li>
-<li>Marius Baumann</li>
-<li>BartjeK</li>
-<li>Andreas Braunmiller</li>
-<li>Esteban Strauch</li>
-<li>tengisu</li>
-<li>Massimo Zancolich</li>
-<li>Leandro V. B.</li>
-<li>Jeremy White</li>
-<li>Siobhan Kathleen Ryan</li>
-<li>Neeme Praks</li>
-<li>Daniel </li>
-<li>kent murray</li>
-<li>J. Harbers</li>
-<li>Jaime Gamarra</li>
-<li>@edoorta</li>
-<li>Michelle J. Haines</li>
-<li>Mark Aelmans</li>
-<li>Kristian Buske</li>
-<li>Giles Constantine</li>
-<li>Denys Aeberhardt</li>
-<li>Joeri Damhuis</li>
-<li>Bert Sonnenschein</li>
-<li>Adrian Bartosik</li>
-<li>Julie Pinzur</li>
-<li>Max</li>
-<li>Wenzel Kriese</li>
-<li>Graeme Haddon</li>
-<li>Tofer Moran</li>
-<li>Thierry Coita</li>
-<li>Sonky</li>
-<li>Silvano Petrini</li>
-<li>Ryan Elizabeth</li>
-<li>ADET Huseyin</li>
-<li>PAEDi</li>
-<li>Pekka Tyrväinen</li>
-<li>ole schultz</li>
-<li>Nils Keesmekers</li>
-<li>Nicolas Lucas</li>
-<li>Muhamed Redzic</li>
-<li>Maximilian Binder</li>
-<li>AlexBP</li>
-<li>Louis Vorster jr</li>
-<li>Alist3r</li>
-<li>Lionel BRUN</li>
-<li>Sabine Lehner</li>
-<li>Lucas Schmid</li>
-<li>Jonatan Männchen</li>
-<li>Haider Ali</li>
-<li>Lukas Hrazdil</li>
-<li>Michael Sørensen</li>
-<li>gianluca ottolina</li>
-<li>Gabriel DERRIEN</li>
-<li>Ergo nomik</li>
-<li>Dario Dellanoce</li>
-<li>Claudio Gallego</li>
-<li>Carl Heath</li>
-<li>annane</li>
-<li>Antoine Martin</li>
-<li>Andreas Doll</li>
-<li>John Van Etten</li>
-<li>Tobias Dümpelfeld</li>
-<li>Eelke</li>
-<li>santiago chavez</li>
-<li>raoni santos</li>
-<li>Omar H. Gassama</li>
-<li>Nathanail Georgiou</li>
-<li>Morten Reistrup Andersen</li>
-<li>Matt</li>
-<li>Mathias Hauge</li>
-<li>Martin Lamacka</li>
-<li>Kyle Alten</li>
-<li>Justin Genné</li>
-<li>ejpcmac</li>
-<li>Joe Jenco</li>
-<li>Marcelo Miceli Lopes</li>
-<li>Rutger Geerling</li>
-<li>dante grassi</li>
-<li>Henning Klasén</li>
-<li>Carlos Arévalo</li>
-<li>Nicholas Frederick</li>
-<li>Konrad Pinheiro</li>
-<li>Julissa Granados</li>
-<li> Christian</li>
-<li>Joseph Bernau</li>
-<li>Mathias R. Wurth</li>
-<li>yallie</li>
-<li>Will Hackett-Jones</li>
-<li>Tyler</li>
-<li>Tomas Bulnes</li>
-<li>thesoundoflunch</li>
-<li>Sonny</li>
-<li>Justine M.</li>
-<li>Stolarczyk Piotr</li>
-<li>Steen Andersen</li>
-<li>Bartlomiej Raczka</li>
-<li>Jan Mauer</li>
-<li>Sami Koivisto</li>
-<li>Mehmet Sina Sucuka</li>
-<li>Simone Santonoceto</li>
-<li>Simon Wilk</li>
-<li>Robin Searle</li>
-<li>AndreaS</li>
-<li>Salem El-khodary</li>
-<li>Michael Cronin</li>
-<li>Robin Kirschbaum</li>
-<li>Doyen Raphaël</li>
-<li>Rachael Borch</li>
-<li>Quentin zeller</li>
-<li>Nils Wingert</li>
-<li>Philip Claes</li>
-<li>Peter de Jong</li>
-<li>Patrick Teunissen</li>
-<li>paolo errico</li>
-<li>Peter Witt</li>
-<li>Egor</li>
-<li>Oscar Canchica</li>
-<li>Nika Apriashvili</li>
-<li>stanley</li>
-<li>Antonio Mara</li>
-<li>Cristian Mocanu</li>
-<li>Michael Hockenhull</li>
-<li>Michal H.</li>
-<li>Michi Schunck</li>
-<li>Markus Emmert</li>
-<li>Mario Netzer</li>
-<li>Marek Sebera</li>
-<li>Kilian Sala</li>
-<li>Marco Brigham</li>
-<li>Sami Makki</li>
-<li>maccosx</li>
-<li>LLiko7</li>
-<li>Karuna</li>
-<li>Kevin Tackabury</li>
-<li>Kevin Kitowski</li>
-<li>T. C. Kettler</li>
-<li>Kajsa Melén</li>
-<li>Kristoffer Brinchmann</li>
-<li>Scott Bissantz</li>
-<li>J.R. Doerig</li>
-<li>Michal Jeřábek</li>
-<li>Jan Reinicke</li>
-<li>Jan Reinicke</li>
-<li>J.Nobis</li>
-<li>Leigh Butcher</li>
-<li>ifco</li>
-<li>David Grant</li>
-<li>Harrison Rowen</li>
-<li>william lozano</li>
-<li>Giovanni Cangiani</li>
-<li>Gennadii Nissenbaum</li>
-<li>Gerardo Dapia</li>
-<li>Frank Wang</li>
-<li>Filippo Dall'Igna</li>
-<li>BLECHINGBERG Florian</li>
-<li>fabrizio oldrini</li>
-<li>Fabien Le Frapper</li>
-<li>Aleksandrs Gusevs</li>
-<li>Fabio Rosati</li>
-<li>Evert Maat</li>
-<li>ernie</li>
-<li>Edward</li>
-<li>Tomdoff</li>
-<li>Dorota Mak</li>
-<li>Dimitri Tsamados</li>
-<li>Jaap Jan de Vries</li>
-<li>David Bédet</li>
-<li>Davey Brouwer</li>
-<li>DarkEaglePro</li>
-<li>Thomas Petrig</li>
-<li>Dan Orbach</li>
-<li>Clemens</li>
-<li>LUMINUX</li>
-<li>mr_pensi</li>
-<li>Norman OBRY</li>
-<li>Bryant Poston</li>
-<li>brunetto</li>
-<li>Brian Zone Enterprise</li>
-<li>Bram Jacobs</li>
-<li>legendban</li>
-<li>Azar Adiloglu</li>
-<li>Artur Glas</li>
-<li>Daniel Cana</li>
-<li>Ari A. Mayer</li>
-<li>Anthony Freda</li>
-<li>Wesley</li>
-<li>Andre Souto</li>
-<li>Alessandro noferi</li>
-<li>Aike de Waard</li>
-<li>Agostino Zamboni</li>
-<li>Adam L Barrett</li>
-<li>Victor Pera</li>
-<li>Jelle Verzijden</li>
-<li>Vlad Hernández</li>
-<li>TeamPhoneBloks</li>
-<li>Maxence Givel</li>
-<li>Jorge Barrionuevo</li>
-<li>Per Guth</li>
-<li>Johann Gislason</li>
-<li>Francesco Stabilito</li>
-<li>Mikhail Chekanov</li>
-<li>Casey I</li>
-<li>Billie</li>
-<li>Marcelo  Steinhaus</li>
-<li>Ashley Wilks</li>
-<li>Zlatko Stojanov</li>
-<li>Dr. Zachary Moore</li>
-<li>Youssef Bouali</li>
-<li>Efstathios Ntonas</li>
-<li>Wouter Slooff</li>
-<li>Sebastian Storm</li>
-<li>Thomas Barnier</li>
-<li>Tim Valentijn</li>
-<li>Tahsin Gökalp Şaan</li>
-<li>Steffen</li>
-<li>Andries Kuipers</li>
-<li>Andrei R. Martins</li>
-<li>Shemer Mann</li>
-<li>Sunbear Free</li>
-<li>Sebastiaan Milis </li>
-<li>Sebastian Wasser</li>
-<li>Sebastian Leitsch</li>
-<li>William Schaller</li>
-<li>Rustem Terlekchi</li>
-<li>Roos Demol</li>
-<li>Stoud</li>
-<li>Robert Stoffels</li>
-<li>Richard Beenen</li>
-<li>Richard van der heide</li>
-<li>Riccardo Panelli</li>
-<li>Renee</li>
-<li>Sierag.nl</li>
-<li>Ramesh Liyanage</li>
-<li>Carly Beaulieu</li>
-<li>Wouter 'Pathemeous' Smit</li>
-<li>Pablo Carrera Martinez</li>
-<li>N. van Doorn</li>
-<li>Nathan Bernard</li>
-<li>Francesco Ristori</li>
-<li>Matt Slodziak</li>
-<li>Judith</li>
-<li>jonathan moon kamphuis</li>
-<li>Michael tremblay </li>
-<li>Michael</li>
-<li>Mats Heinemann</li>
-<li>Mart Nicolai</li>
-<li>Manuel Mundt</li>
-<li>Massimiliano</li>
-<li>Lucy Khan</li>
-<li>Lieven Boon</li>
-<li>Leon Derks</li>
-<li>Lasse Zimmat</li>
-<li>Kristin Tecles</li>
-<li>Marcel Reckel</li>
-<li>mirko scravaglieri</li>
-<li>KaVVaK</li>
-<li>Juri Bruciati</li>
-<li>Joris Roovers</li>
-<li>Jess Kiri</li>
-<li>Jelmer de Ronde</li>
-<li>Jan</li>
-<li>Johann Der Oberbabo Höfler</li>
-<li>Ivan vargas</li>
-<li>lufy</li>
-<li>hamid</li>
-<li>Felipe Marx</li>
-<li>Gal Barak</li>
-<li>federico317</li>
-<li>federico317</li>
-<li>Enrico Monaco</li>
-<li>gerben eelink</li>
-<li>edgar laksa</li>
-<li>Alecca</li>
-<li>Marvin Droogsma</li>
-<li>Dogus Yigit Ozcelik</li>
-<li>Dario Rizzo</li>
-<li>DLEITUGA</li>
-<li>Corentin Dancette</li>
-<li>Christian Neidhardt</li>
-<li>David Kesselheim</li>
-<li>Cem Coruk</li>
-<li>Cameron Wang</li>
-<li>Burak Bakir</li>
-<li>Björn Haller</li>
-<li>Billie</li>
-<li>Benny Lundgren</li>
-<li>SnagaDuath</li>
-<li>Arodon</li>
-<li>Aleks</li>
-<li>Ashley Kerrison</li>
-<li>AntoineJ</li>
-<li>Garrabos Manon</li>
-<li>J2H Impulse</li>
-<li>Arthur Pattée</li>
-<li>Stephen Temple</li>
-<li>sofian madi</li>
-<li>Aeph</li>
-<li>Patrik</li>
-<li>niko</li>
-<li>Kolesznyikov Nikita</li>
-<li>Juan S. Echeverry Gonzalez</li>
-<li>francesco maria colombo</li>
-<li>Eliran Efron</li>
-<li>Daniel Console</li>
-<li>Avishay Sweiry</li>
-<li>McKenzie Brunet</li>
-<li>thomas</li>
-<li>Kaimeros</li>
-<li>Sebastian Vittersø</li>
-<li>daniel espinoza</li>
-<li>Lukas Urbonas</li>
-<li>Mikimadm3</li>
-<li>Jared Boucher</li>
-<li>Matteo Perini</li>
-<li>Denise Huynh</li>
-<li>Roland Simon</li>
-<li>Matheus Ashton </li>
-<li>Mason Moser</li>
-<li>luca cosentino</li>
-<li>Linus</li>
-<li>Lake</li>
-<li>Christian Di Carlo</li>
-<li>Gustavo Salvador Melo</li>
-<li>Michael Van Varenberg</li>
-<li>Bradley Roring</li>
-<li>D. Sharpe</li>
-<li>Constantin Pislaru</li>
-<li>GARCIN</li>
-<li>Andrey Atapin</li>
-<li>Massimiliano</li>
-<li>Emily Prince</li>
-<li>Sven Kötting</li>
-<li>George Stoumpos</li>
-<li>Stefan Barthelmann</li>
-<li>Daniel Orosz</li>
-<li>Shade Legacy</li>
-<li>Sebastian Vittersø</li>
-<li>SannaMumsNilsson</li>
-<li>Rafael Ruiz</li>
-<li>Adrien M.</li>
-<li>SwiiLy</li>
-<li>Mircea Florea</li>
-<li>Marko Ivanetić</li>
-<li>Panda Velká</li>
-<li>Imani Lewis</li>
-<li>Kekko G</li>
-<li>Kenneth K. Pedersen</li>
-<li>Joris Dekkers</li>
-<li>christian guhl</li>
-<li>Henry Sagehorn</li>
-<li>Haren Bhavnani</li>
-<li>Gor Kikanian</li>
-<li>Giovhanny Archer</li>
-<li>Giacomo Sartini</li>
-<li>Florent salles </li>
-<li>Florian Vranckx</li>
-<li>Gentry Demchak</li>
-<li>Clemens Fehringer</li>
-<li>Caleb Bastion</li>
-<li>Bruno Paim</li>
-<li>Berk Sakalli</li>
-<li>Benno von Willert</li>
-<li>Daan</li>
-<li>Vicentiu Ventila</li>
-<li>Luca Venuti</li>
-<li>julian Fiefhaus</li>
-<li>Cheng Li-Tin</li>
-<li>Erick D.</li>
-<li>Wouter</li>
-<li>Winkfein Gábor</li>
-<li>Maximilian Kerscher</li>
-<li>Agneessens Maël</li>
-<li>Tobias</li>
-<li>Timo Luhta</li>
-<li>Viktor Vaskó</li>
-<li>Tim Vos</li>
-<li>Hans de Wilde</li>
-<li>vogti</li>
-<li>Graeme Chew (Chewy)</li>
-<li>Stanislav</li>
-<li>Briatte Alan </li>
-<li>Levente-Csaba Kovács</li>
-<li>Sha</li>
-<li>sebastian </li>
-<li>Pablo Schiaffino</li>
-<li>Sascha Seidel</li>
-<li>Anon_Placid </li>
-<li>MrBlogify</li>
-<li>Nihad Ramic</li>
-<li>Arnaud</li>
-<li>Niclas Trube</li>
-<li>Mateo García</li>
-<li>M Bonanni</li>
-<li>Luke Darragh</li>
-<li>Danny lohanko</li>
-<li>Kruno Šatović</li>
-<li>Anders Klingsheim</li>
-<li>Anders</li>
-<li>juan buatista marquez</li>
-<li>Joscplan</li>
-<li>Jonathan Klingvall</li>
-<li>Jonas Pütz</li>
-<li>johanneskloostra</li>
-<li>Jarmo van Buijtene</li>
-<li>oscar fernando gallardo yari</li>
-<li>Frederik Tuemand</li>
-<li>foucrazy</li>
-<li>Jonathan Feregrino</li>
-<li>Saudi Arabia</li>
-<li>Darian Hart</li>
-<li>Pierre Chevalier</li>
-<li>Selin COŞAR</li>
-<li>Nicolo S</li>
-<li>BAYLE Grégory</li>
-<li>Britt Ster</li>
-<li>Boris</li>
-<li>Yu_Jin_X5</li>
-<li>Rita Silva</li>
-<li>Amund Aspaas - Norway</li>
-<li>Austin Rose</li>
-<li>Alice Fedalto</li>
-<li>wangzhen</li>
-<li>Venelin K. Hristov</li>
-<li>Jeppe Skaarup</li>
-<li>Victor Herrera</li>
-</ul>
-</div>
-</div>
-</div>
+            {( "data/donors.html" )}
+          </ul>
+      </div>
+    </div>
+  </div>

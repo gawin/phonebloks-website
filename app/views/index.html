@@ -2,9 +2,9 @@
       <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-          <p style="font-size: 19px;line-height: 30px;text-align: center;margin-top: 60px">Phonebloks is an <b>independent</b> organisation with the purpose of <b>encouraging</b> the development and production of products that produce <b>less electronic waste</b>.<br>
+          <p style="font-size: 19px;line-height: 30px;text-align: center;margin-top: 60px">{{ t["INDEX_INTRO_1A"] }}
           <img src="/imgs/v4-exploded.png" alt="Phonebloks" style="width: 160px;height: 160px;margin: 30px 0"/><br>
-          Starting with your phone.<br>&nbsp;</p>
+          {{ t["INDEX_INTRO_1B"] }}<br>&nbsp;</p>
         </div>
         <div class="col-md-2"></div>
       </div>
@@ -13,11 +13,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-9" id="video-full">
-           <iframe class="video-full" width="100%" height="464" src="//www.youtube.com/embed/4KmewIC-eV4?modestbranding=1;autohide=1&amp;showinfo=0&amp;controls=1&amp;vq=hd1080&amp;hd=1" frameborder="0" allowfullscreen></iframe>
+           <iframe class="video-full" width="100%" height="100%" src="//www.youtube.com/embed/4KmewIC-eV4?modestbranding=1;autohide=1&amp;showinfo=0&amp;controls=1&amp;vq=hd1080&amp;hd=1" frameborder="0" wmode="transparent" allowfullscreen></iframe>
         </div>
         <div class="col-md-3 block video-sidebar">
-         <h2>Phonebloks</h2>
-          <p>Phonebloks all started with <a id="video1" href="https://www.youtube.com/watch?v=oDAw7vW7H0c" target="_blank">one video</a>, an idea for a phone worth keeping. With a social media reach of over <b>380,000,000 people</b> it has been quite succesful. We never intended to build a mobile phone ourselves. But it was an effective way to show the mobile industry the <b>need for change</b>.<br>Now we are trying to steer the industry towards a more modular direction, using the power of the people.<br><a href='{{ "/" .. language .. "/about" }}'>Discover more</a></p>
+         <h2>{{ t["INDEX_INTRO_2A"] }}</h2>
+          <p>{{ t["INDEX_INTRO_2B"] }}
+            <a href='{{ "/" .. language .. "/about" }}'>{{ t["INDEX_INTRO_2C"] }}</a>
+          </p>
         </div>
       </div>
     </div>
@@ -27,35 +29,35 @@
         <div class="col-md-4 submenu-left">
           <div class="submenu-block">
             <a href='https://community.phonebloks.com'>
-              <p class="text-center"><img src="/imgs/v4-people.png" alt="Community" style="width:160px;margin: 32px 0 0"/></p>
-              <h3>Community</h3>
-              <p>Join our community and get involved.</p>
+              <p class="text-center"><img src="/imgs/v4-people.png" alt="Community"/></p>
+              <h3>{{ t["INDEX_INTRO_3A"] }}</h3>
+              <p>{{ t["INDEX_INTRO_3B"] }}</p>
             </a>
           </div>
         </div>
         <div class="col-md-4 submenu-middle">
           <a href='{{ "/" .. language .. "/partners" }}'>
-            <p class="text-center"><img src="/imgs/v4-handshake2.png" alt="Partner" style="width:160px;margin: 37px 0 0"/></p>
-            <h3>Partners</h3>
-            <p>Companies that support Phonebloks.</p>
+            <p class="text-center"><img src="/imgs/v4-handshake2.png" alt="Partner"/></p>
+            <h3>{{ t["INDEX_INTRO_4A"] }}</h3>
+            <p>{{ t["INDEX_INTRO_4B"] }}</p>
           </a>
         </div>
         <div class="col-md-4 submenu-right">
           <div class="submenu-block">
             <a href='{{ "/" .. language .. "/help-us" }}'>
-              <p class="text-center"><img src="/imgs/v4-heart.png" alt="Donate" style="width:160px;margin: 37px 0 0" /></p>
-              <h3>Help us</h3>
-              <p>Contribute to Phonebloks.</p>
+              <p class="text-center"><img src="/imgs/v4-heart.png" alt="Donate" /></p>
+              <h3>{{ t["INDEX_INTRO_5A"] }}</h3>
+              <p>{{ t["INDEX_INTRO_5B"] }}</p>
             </a>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container block">
+    <div class="container block"> 
       <div class="row">
         <div class="col-md-12">
-          <h3>News</h3>
+          <h3>{{ t["INDEX_INTRO_6A"] }}</h3>
         </div>
         <div class="col-md-4">
           <ul class="news">
@@ -155,5 +157,3 @@
         </div>
       </div>
    </div>
-
- </div>

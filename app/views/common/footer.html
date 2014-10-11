@@ -20,14 +20,14 @@
 
         <div class="col-md-4 submenu-middle">
           <form class="form-horizontal"  id="newsletterform" role="form" name="mailing" action="/api/mailing/signup" method="post">
-            <p class="result" style="font-size: 14px">Subscribe to our infrequently news letter.</p>
+            <p class="result">{{ t["FOOTER_NEWS_LETTER_TITLE"] }}</p>
             <div class="form-group">
-              <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+              <label for="inputEmail" class="col-sm-2 control-label">{{ t["FOOTER_NEWS_LETTER_EMAIL_LABEL"] }}</label>
               <div class="col-sm-6">
-                <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Email address">
+                <input name="email" type="email" class="form-control" id="inputEmail" placeholder='{{ t["FOOTER_NEWS_LETTER_EMAIL_PLACEHOLDER"] }}'>
               </div>
               <div class="col-sm-2 col-submit">
-                <button type="submit" class="btn btn-inverted">Subscribe</button>
+                <button type="submit" class="btn btn-inverted">{{ t["FOOTER_NEWS_LETTER_SUBMIT"] }}</button>
               </div>
             </div>
           </form>
@@ -36,16 +36,16 @@
         <div class="col-md-4 submenu-right">
           <div class="col-md-6">
             <ul>
-              <li><a href='{{ t["FOOTER_FACEBOOK_URL"] }}'><i class="fa fa-facebook"></i>{{ t["FOOTER_FACEBOOK"] }}</a></li>
-              <li><a href='{{ t["FOOTER_TWITTER_URL"] }}'><i class="fa fa-twitter"></i>{{ t["FOOTER_TWITTER"] }}</a></li>
-              <li><a href='{{ t["FOOTER_GOOGLE_URL"] }}'><i class="fa fa-google-plus"></i>{{ t["FOOTER_GOOGLE"] }}</a></li>
+              <li><a href='{{ t["SOCIAL_MEDIA_FACEBOOK_URL"] }}'><i class="fa fa-facebook"></i>{{ t["SOCIAL_MEDIA_FACEBOOK"] }}</a></li>
+              <li><a href='{{ t["SOCIAL_MEDIA_TWITTER_URL"] }}'><i class="fa fa-twitter"></i>{{ t["SOCIAL_MEDIA_TWITTER"] }}</a></li>
+              <li><a href='{{ t["SOCIAL_MEDIA_GOOGLE_URL"] }}'><i class="fa fa-google-plus"></i>{{ t["SOCIAL_MEDIA_GOOGLE"] }}</a></li>
             <ul>
           </div>
           <div class="col-md-6">
             <ul>
-              <li><a href='{{ t["FOOTER_YOUTUBE_URL"] }}'><i class="fa fa-youtube"></i>{{ t["FOOTER_YOUTUBE"] }}</a></li>
-              <li><a href='{{ t["FOOTER_INSTAGRAM_URL"] }}'><i class="fa fa-instagram"></i>{{ t["FOOTER_INSTAGRAM"] }}</a></li>
-              <li><a href='{{ t["FOOTER_LINKEDIN_URL"] }}'><i class="fa fa-linkedin"></i>{{ t["FOOTER_LINKEDIN"] }}</a></li>
+              <li><a href='{{ t["SOCIAL_MEDIA_YOUTUBE_URL"] }}'><i class="fa fa-youtube"></i>{{ t["SOCIAL_MEDIA_YOUTUBE"] }}</a></li>
+              <li><a href='{{ t["SOCIAL_MEDIA_INSTAGRAM_URL"] }}'><i class="fa fa-instagram"></i>{{ t["SOCIAL_MEDIA_INSTAGRAM"] }}</a></li>
+              <li><a href='{{ t["SOCIAL_MEDIA_LINKEDIN_URL"] }}'><i class="fa fa-linkedin"></i>{{ t["SOCIAL_MEDIA_LINKEDIN"] }}</a></li>
             <ul>
           </div>
         </div>
@@ -60,4 +60,4 @@
           <p>&copy; Phonebloks 2014</p>
         </div>
       </footer>
-    </div>
+    </div> <!-- /container -->
