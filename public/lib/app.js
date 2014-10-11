@@ -109,8 +109,22 @@ function choosePaypal(){
   $("form[name='donation'] #no").focus();
 }
 
-function showDialog(msg){
-  console.log(msg);
+function showDialog(title, content, buttonText, buttonUrl){
+  $('.dialog a').html(buttonText);
+  $('.dialog a').attr('href', buttonUrl);
+  $('.dialog h2').html(title);
+  $('.dialog p').html(content);
+  $('.overlay').show();
+  $('.page').addClass('blur');
+  $('.overlay').click(function(){
+    hideDialog();
+  });
+  event.preventDefault();
+}
+
+function hideDialog(){
+  $('.page').removeClass('blur');
+  $('.overlay').hide();
 }
 
 function checkNavbarFixed(){
@@ -137,13 +151,6 @@ function invertedButton(button){
   } else {
     $("#sennheiser").removeClass("btn-default");
     $("#sennheiser").addClass("btn-inverted");
-  }
-  if(button != "fairphone"){
-    $("#fairphone").removeClass("btn-inverted");
-    $("#fairphone").addClass("btn-default");
-  } else {
-    $("#fairphone").removeClass("btn-default");
-    $("#fairphone").addClass("btn-inverted");
   }
 }
 
@@ -220,7 +227,6 @@ $(document).ready(function() {
 
   // Partner page buttons
   $( ".google" ).click(function() {
-    if($("#fairphone-more").css("display") == "block"){ $("#fairphone-more").slideUp(600, function() {}); }
     if($("#sennheiser-more").css("display") == "block"){ $("#sennheiser-more").slideUp(600, function() {}); }
     if($("#google-more").css("display") == "none"){
       invertedButton("google");
@@ -233,27 +239,13 @@ $(document).ready(function() {
   });
 
   $(".sennheiser").click(function() {
-    if($("#google-more").css("display") == "block"){ $("#google-more").slideUp(600, function() {}); }
-    if($("#fairphone-more").css("display") == "block"){ $("#fairphone-more").slideUp(600, function() {}); }
+    if($("#google-more").css("display") == "block"){ $("#google-more").slideUp(600, function() {}); }  
     if($("#sennheiser-more").css("display") == "none"){
       invertedButton("sennheiser");
       $("#sennheiser-more").slideDown(600, function() {});
     } else {
       invertedButton("");
       $("#sennheiser-more").slideUp(600, function() {});
-    }
-    event.preventDefault();
-  });
-
-  $(".fairphone").click(function() {
-    if($("#google-more").css("display") == "block"){ $("#google-more").slideUp(600, function() {}); }
-    if($("#sennheiser-more").css("display") == "block"){ $("#sennheiser-more").slideUp(600, function() {}); }
-    if($("#fairphone-more").css("display") == "none"){
-      invertedButton("fairphone");
-      $("#fairphone-more").slideDown(600, function() {});
-    } else {
-      invertedButton("");
-      $("#fairphone-more").slideUp(600, function() {});
     }
     event.preventDefault();
   });
@@ -277,6 +269,13 @@ $(document).ready(function() {
     chooseStripe();
   } else if (location.hash == "#paypal"){
     choosePaypal();
+  }
+
+  // Shuffle friends
+  var parent = $("#friends");
+  var divs = parent.children();
+  while (divs.length) {
+    parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
   }
 
 });
