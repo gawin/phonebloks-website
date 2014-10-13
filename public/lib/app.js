@@ -1,13 +1,3 @@
-// === Stripe === //
-if (window.location.hostname == 'phonebloks.com') {
-  // Stripe public key for live
-  Stripe.setPublishableKey('pk_live_R4oZ8adFeUL2FK2fxFA5Nist');
-} else {
-  // Stripe public key for testing
-  Stripe.setPublishableKey('pk_test_D1F0zrW2EZtTZIorJAntaPIz');
-  console.log('Stripe in test mode.');
-}
-
 var stripeResponseHandler = function(status, response) {
   if (response.error) {
 
@@ -278,6 +268,16 @@ $(document).ready(function() {
   var divs = parent.children();
   while (divs.length) {
     parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+  }
+
+  // === Stripe === //
+  if (window.location.hostname == 'phonebloks.com') {
+    // Stripe public key for live
+    Stripe.setPublishableKey('pk_live_R4oZ8adFeUL2FK2fxFA5Nist');
+  } else {
+    // Stripe public key for testing
+    Stripe.setPublishableKey('pk_test_D1F0zrW2EZtTZIorJAntaPIz');
+    console.log('Stripe in test mode.');
   }
 
 });
