@@ -9,34 +9,44 @@
         </div>
       </div>
       <script>
-        var friends1dialog = '<img src="{{ t["FRIENDS_1_LOGO"] }}" style="width: 115px;height:60px"><br>{{ t['FRIENDS_1_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_1_URL'] }}" target="_blank">{{ t['FRIENDS_1_URL'] }}</a>';
-        var friends2dialog = '<img src="{{ t["FRIENDS_2_LOGO"] }}" style="width: 115px;height:60px"><br>{{ t['FRIENDS_2_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_2_URL'] }}" target="_blank">{{ t['FRIENDS_2_URL'] }}</a>';
-        var friends3dialog = '<img src="{{ t["FRIENDS_3_LOGO"] }}" style="width: 115px;height:60px"><br>{{ t['FRIENDS_3_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_3_URL'] }}" target="_blank">{{ t['FRIENDS_3_URL'] }}</a>';
-        var friends4dialog = '<img src="{{ t["FRIENDS_4_LOGO"] }}" style="width: 115px;height:60px"><br>{{ t['FRIENDS_4_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_4_URL'] }}" target="_blank">{{ t['FRIENDS_4_URL'] }}</a>';
-        var friends5dialog = '<img src="{{ t["FRIENDS_5_LOGO"] }}" style="width: 115px;height:60px"><br>{{ t['FRIENDS_5_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_5_URL'] }}" target="_blank">{{ t['FRIENDS_5_URL'] }}</a>';
-        var friends6dialog = '<img src="{{ t["FRIENDS_6_LOGO"] }}" style="width: 115px;height:60px"><br>{{ t['FRIENDS_6_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_6_URL'] }}" target="_blank">{{ t['FRIENDS_6_URL'] }}</a>';
-        var friends7dialog = '<img src="{{ t["FRIENDS_7_LOGO"] }}" style="width: 115px;height:60px"><br>{{ t['FRIENDS_7_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_7_URL'] }}" target="_blank">{{ t['FRIENDS_7_URL'] }}</a>';
-        var friends8dialog = '<img src="{{ t["FRIENDS_8_LOGO"] }}" style="width: 115px;height:60px"><br>{{ t['FRIENDS_8_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_8_URL'] }}" target="_blank">{{ t['FRIENDS_8_URL'] }}</a>';
-        var friends9dialog = '<img src="{{ t["FRIENDS_9_LOGO"] }}" style="width: 115px;height:60px"><br>{{ t['FRIENDS_9_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_9_URL'] }}" target="_blank">{{ t['FRIENDS_9_URL'] }}</a>';
-        var friends10dialog = '<img src="{{ t["FRIENDS_10_LOGO"] }}" style="width: 115px;height:60px"><br>{{ t['FRIENDS_10_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_10_URL'] }}" target="_blank">{{ t['FRIENDS_10_URL'] }}</a>';
-        var friends11dialog = '<img src="{{ t["FRIENDS_11_LOGO"] }}" style="width: 115px;height:60px"><br>{{ t['FRIENDS_11_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_11_URL'] }}" target="_blank">{{ t['FRIENDS_11_URL'] }}</a>';
-        var friends12dialog = '<img src="{{ t["FRIENDS_12_LOGO"] }}" style="width: 115px;height:60px"><br>{{ t['FRIENDS_12_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_12_URL'] }}" target="_blank">{{ t['FRIENDS_12_URL'] }}</a>';
+        var friends1title = '<img src="{{ t["FRIENDS_1_LOGO"] }}" style="width: 115px;height:60px">';
+        var friends2title = '<img src="{{ t["FRIENDS_2_LOGO"] }}" style="width: 115px;height:60px">';
+        var friends3title = '<img src="{{ t["FRIENDS_3_LOGO"] }}" style="width: 115px;height:60px">';
+        var friends4title = '<img src="{{ t["FRIENDS_4_LOGO"] }}" style="width: 115px;height:60px">';
+        var friends5title = '<img src="{{ t["FRIENDS_5_LOGO"] }}" style="width: 115px;height:60px">';
+        var friends6title = '<img src="{{ t["FRIENDS_6_LOGO"] }}" style="width: 115px;height:60px">';
+        var friends7title = '<img src="{{ t["FRIENDS_7_LOGO"] }}" style="width: 115px;height:60px">';
+        var friends8title = '<img src="{{ t["FRIENDS_8_LOGO"] }}" style="width: 115px;height:60px">';
+        var friends9title = '<img src="{{ t["FRIENDS_9_LOGO"] }}" style="width: 115px;height:60px">';
+        var friends10title = '<img src="{{ t["FRIENDS_10_LOGO"] }}" style="width: 115px;height:60px">';
+        var friends11title = '<img src="{{ t["FRIENDS_11_LOGO"] }}" style="width: 115px;height:60px">';
+        var friends12title = '<img src="{{ t["FRIENDS_12_LOGO"] }}" style="width: 115px;height:60px">';
+        var friends1dialog = '{{ t['FRIENDS_1_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_1_URL'] }}" target="_blank">{{ t['FRIENDS_1_URL'] }}</a>';
+        var friends2dialog = '{{ t['FRIENDS_2_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_2_URL'] }}" target="_blank">{{ t['FRIENDS_2_URL'] }}</a>';
+        var friends3dialog = '{{ t['FRIENDS_3_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_3_URL'] }}" target="_blank">{{ t['FRIENDS_3_URL'] }}</a>';
+        var friends4dialog = '{{ t['FRIENDS_4_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_4_URL'] }}" target="_blank">{{ t['FRIENDS_4_URL'] }}</a>';
+        var friends5dialog = '{{ t['FRIENDS_5_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_5_URL'] }}" target="_blank">{{ t['FRIENDS_5_URL'] }}</a>';
+        var friends6dialog = '{{ t['FRIENDS_6_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_6_URL'] }}" target="_blank">{{ t['FRIENDS_6_URL'] }}</a>';
+        var friends7dialog = '{{ t['FRIENDS_7_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_7_URL'] }}" target="_blank">{{ t['FRIENDS_7_URL'] }}</a>';
+        var friends8dialog = '{{ t['FRIENDS_8_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_8_URL'] }}" target="_blank">{{ t['FRIENDS_8_URL'] }}</a>';
+        var friends9dialog = '{{ t['FRIENDS_9_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_9_URL'] }}" target="_blank">{{ t['FRIENDS_9_URL'] }}</a>';
+        var friends10dialog = '{{ t['FRIENDS_10_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_10_URL'] }}" target="_blank">{{ t['FRIENDS_10_URL'] }}</a>';
+        var friends11dialog = '{{ t['FRIENDS_11_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_11_URL'] }}" target="_blank">{{ t['FRIENDS_11_URL'] }}</a>';
+        var friends12dialog = '{{ t['FRIENDS_12_DESCRIPTION'] }}<br><a href="{{ t['FRIENDS_12_URL'] }}" target="_blank">{{ t['FRIENDS_12_URL'] }}</a>';
       </script>
       <div id="friends" class="row text-center">
-
-        <div class="col-md-3"><p><a href='{{ t["FRIENDS_1_URL"] }}' onclick="showDialog('', friends1dialog, 'Ok', '#');"><img src='{{ t["FRIENDS_1_LOGO"] }}' style="width: 115px;height:60px"></a></p></div>
-        <div class="col-md-3"><p><a href='{{ t["FRIENDS_2_URL"] }}' onclick="showDialog('', friends2dialog, 'Ok', '#');"><img src='{{ t["FRIENDS_2_LOGO"] }}' style="width: 115px;height:60px"></a></p></div>
-        <div class="col-md-3"><p><a href='{{ t["FRIENDS_3_URL"] }}' onclick="showDialog('', friends3dialog, 'Ok', '#');"><img src='{{ t["FRIENDS_3_LOGO"] }}' style="width: 115px;height:60px"></a></p></div>
-        <div class="col-md-3"><p><a href='{{ t["FRIENDS_4_URL"] }}' onclick="showDialog('', friends4dialog, 'Ok', '#');"><img src='{{ t["FRIENDS_4_LOGO"] }}' style="width: 115px;height:60px"></a></p></div>
-        <div class="col-md-3"><p><a href='{{ t["FRIENDS_5_URL"] }}' onclick="showDialog('', friends5dialog, 'Ok', '#');"><img src='{{ t["FRIENDS_5_LOGO"] }}' style="width: 115px;height:60px"></a></p></div>
-        <div class="col-md-3"><p><a href='{{ t["FRIENDS_6_URL"] }}' onclick="showDialog('', friends6dialog, 'Ok', '#');"><img src='{{ t["FRIENDS_6_LOGO"] }}' style="width: 115px;height:60px"></a></p></div>
-        <div class="col-md-3"><p><a href='{{ t["FRIENDS_7_URL"] }}' onclick="showDialog('', friends7dialog, 'Ok', '#');"><img src='{{ t["FRIENDS_7_LOGO"] }}' style="width: 115px;height:60px"></a></p></div>
-        <div class="col-md-3"><p><a href='{{ t["FRIENDS_8_URL"] }}' onclick="showDialog('', friends8dialog, 'Ok', '#');"><img src='{{ t["FRIENDS_8_LOGO"] }}' style="width: 115px;height:60px"></a></p></div>
-        <div class="col-md-3"><p><a href='{{ t["FRIENDS_9_URL"] }}' onclick="showDialog('', friends9dialog, 'Ok', '#');"><img src='{{ t["FRIENDS_9_LOGO"] }}' style="width: 115px;height:60px"></a></p></div>
-        <div class="col-md-3"><p><a href='{{ t["FRIENDS_10_URL"] }}' onclick="showDialog('', friends10dialog, 'Ok', '#');"><img src='{{ t["FRIENDS_10_LOGO"] }}' style="width: 115px;height:60px"></a></p></div>
-        <div class="col-md-3"><p><a href='{{ t["FRIENDS_11_URL"] }}' onclick="showDialog('', friends11dialog, 'Ok', '#');"><img src='{{ t["FRIENDS_11_LOGO"] }}' style="width: 115px;height:60px"></a></p></div>
-        <div class="col-md-3"><p><a href='{{ t["FRIENDS_12_URL"] }}' onclick="showDialog('', friends12dialog, 'Ok', '#');"><img src='{{ t["FRIENDS_12_LOGO"] }}' style="width: 115px;height:60px"></a></p></div>
-
+        <div class="col-md-3"><p><a href='{{ t["FRIENDS_1_URL"] }}'  onclick="showDialog(friends1title,  friends1dialog,  'Close', '#');"><img src='{{ t["FRIENDS_1_LOGO"] }}'  style="width: 115px;height:60px"></a></p></div>
+        <div class="col-md-3"><p><a href='{{ t["FRIENDS_2_URL"] }}'  onclick="showDialog(friends2title,  friends2dialog,  'Close', '#');"><img src='{{ t["FRIENDS_2_LOGO"] }}'  style="width: 115px;height:60px"></a></p></div>
+        <div class="col-md-3"><p><a href='{{ t["FRIENDS_3_URL"] }}'  onclick="showDialog(friends3title,  friends3dialog,  'Close', '#');"><img src='{{ t["FRIENDS_3_LOGO"] }}'  style="width: 115px;height:60px"></a></p></div>
+        <div class="col-md-3"><p><a href='{{ t["FRIENDS_4_URL"] }}'  onclick="showDialog(friends4title,  friends4dialog,  'Close', '#');"><img src='{{ t["FRIENDS_4_LOGO"] }}'  style="width: 115px;height:60px"></a></p></div>
+        <div class="col-md-3"><p><a href='{{ t["FRIENDS_5_URL"] }}'  onclick="showDialog(friends5title,  friends5dialog,  'Close', '#');"><img src='{{ t["FRIENDS_5_LOGO"] }}'  style="width: 115px;height:60px"></a></p></div>
+        <div class="col-md-3"><p><a href='{{ t["FRIENDS_6_URL"] }}'  onclick="showDialog(friends6title,  friends6dialog,  'Close', '#');"><img src='{{ t["FRIENDS_6_LOGO"] }}'  style="width: 115px;height:60px"></a></p></div>
+        <div class="col-md-3"><p><a href='{{ t["FRIENDS_7_URL"] }}'  onclick="showDialog(friends7title,  friends7dialog,  'Close', '#');"><img src='{{ t["FRIENDS_7_LOGO"] }}'  style="width: 115px;height:60px"></a></p></div>
+        <div class="col-md-3"><p><a href='{{ t["FRIENDS_8_URL"] }}'  onclick="showDialog(friends8title,  friends8dialog,  'Close', '#');"><img src='{{ t["FRIENDS_8_LOGO"] }}'  style="width: 115px;height:60px"></a></p></div>
+        <div class="col-md-3"><p><a href='{{ t["FRIENDS_9_URL"] }}'  onclick="showDialog(friends9title,  friends9dialog,  'Close', '#');"><img src='{{ t["FRIENDS_9_LOGO"] }}'  style="width: 115px;height:60px"></a></p></div>
+        <div class="col-md-3"><p><a href='{{ t["FRIENDS_10_URL"] }}' onclick="showDialog(friends10title, friends10dialog, 'Close', '#');"><img src='{{ t["FRIENDS_10_LOGO"] }}' style="width: 115px;height:60px"></a></p></div>
+        <div class="col-md-3"><p><a href='{{ t["FRIENDS_11_URL"] }}' onclick="showDialog(friends11title, friends11dialog, 'Close', '#');"><img src='{{ t["FRIENDS_11_LOGO"] }}' style="width: 115px;height:60px"></a></p></div>
+        <div class="col-md-3"><p><a href='{{ t["FRIENDS_12_URL"] }}' onclick="showDialog(friends12title, friends12dialog, 'Close', '#');"><img src='{{ t["FRIENDS_12_LOGO"] }}' style="width: 115px;height:60px"></a></p></div>
       </div>
     </div>
     

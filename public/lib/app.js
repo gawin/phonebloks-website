@@ -110,13 +110,14 @@ function choosePaypal(){
 }
 
 function showDialog(title, content, buttonText, buttonUrl){
-  $('.dialog a').html(buttonText);
-  $('.dialog a').attr('href', buttonUrl);
-  $('.dialog h2').html(title);
-  $('.dialog p').html(content);
-  $('.overlay').show();
+  $('.dialog').empty();
+  $('.dialog').append('<h2>'+title+'</h2>');
+  $('.dialog').append(content);
+  $('.dialog').append('<p class="cta"><a href="'+buttonUrl+'" class="btn btn-inverted" role="button">' + buttonText + '</a></p>');
+  $('body').addClass('noscroll');
+  $('#overlay').show();
   $('.page').addClass('blur');
-  $('.overlay').click(function(){
+  $('#overlay').click(function(){
     hideDialog();
   });
   event.preventDefault();
@@ -124,7 +125,8 @@ function showDialog(title, content, buttonText, buttonUrl){
 
 function hideDialog(){
   $('.page').removeClass('blur');
-  $('.overlay').hide();
+  $('#overlay').hide();
+  $('body').removeClass('noscroll');
 }
 
 function checkNavbarFixed(){
