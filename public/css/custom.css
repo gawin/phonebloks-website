@@ -749,12 +749,6 @@ fieldset[disabled] .btn-inverted.active {
 .stripe-errors{
   color: red
 }
-
-/* Scroll lock for on the body when the overlay is displayed */
-.noscroll{
-  overflow: hidden;
-  position: fixed;
-}
 #overlay {
   background: #000; /* Extra background color because IE7 doesn't understand transparancy */
   background: rgba(0,0,0,0.8);
