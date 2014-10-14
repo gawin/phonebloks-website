@@ -115,6 +115,7 @@ function showDialog(title, content, buttonText, buttonUrl){
 function hideDialog(){
   $('.page').removeClass('blur');
   $('#overlay').hide();
+  event.preventDefault();
 }
 
 function checkNavbarFixed(){
