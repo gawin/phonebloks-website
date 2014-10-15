@@ -106,7 +106,7 @@ function showDialog(title, content, buttonText, buttonUrl){
   $('.dialog').append('<p class="cta"><a href="'+buttonUrl+'" class="btn btn-inverted" role="button">' + buttonText + '</a></p>');
   $('#overlay').show();
   $('.page').addClass('blur');
-  $('#overlay').click(function(){
+  $('.cta').click(function(){
     hideDialog();
   });
   event.preventDefault();
