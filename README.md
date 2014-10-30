@@ -2,8 +2,7 @@
 
 _In case of emergency contact Gawin, either on his cell or email at gawin@phonebloks.com._
 
-_Changes are automatically deployed every 10 minutes._
-_It may take up to 24 hours for caching to expire._
+_Changes are automatically deployed every 10 minutes. <br/> Please allow up to 24 hours for caching to expire._
 
 ## Goals
 
