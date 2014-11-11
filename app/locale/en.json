@@ -1,4 +1,4 @@
-{
+I{
 "LANGUAGE" : "English",
 
 "MONTH_JAN_FULL" : "January",
@@ -292,9 +292,19 @@
 "FRIENDS_13_LOGO" : "/imgs/logo/peoplepeople.png",
 
 "FRIENDS_14_TITLE" : "VR CAMERA",
-"FRIENDS_14_DESCRIPTION" : "We make technology invisible and revitalise the rectangular boredom faced by consumers.With an open source AR & VR platform we will empower content creators. Our modular wearable VR camera system will deliver a full spherical 360x360 stills and video in 2D & 3D 360. Capture 2k 4k & 8k VOD or live stream. Exciting times ahead for the bloks community.",
-"FRIENDS_14_URL" : "http://www.triggar.com.au",
+"FRIENDS_14_DESCRIPTION" : "We make technology invisible and revitalise the rectangular boredom faced by consumers. With an open source AR & VR platform we will empower content creators. Our modular wearable VR camera system will deliver a full spherical 360x360 stills and video in 2D & 3D 360. Capture 2k 4k & 8k VOD or live stream. Exciting times ahead for the bloks community.",
+"FRIENDS_14_URL" : "www.triggar.com.au",
 "FRIENDS_14_LOGO" : "/imgs/logo/triggar.png",
+
+
+"FRIENDS_15_TITLE" : "MANUFACTURER CIRCUIT BOARD",
+"FRIENDS_15_DESCRIPTION" : "AT&S is a manufacturer specialized in high-end printed circuit board technology. Continuously adding functionalities of PCB, we enable 3D functional integration through our 2.5D(R) and ECP(R) technologies. By fully or partially embedding active and passive components within the substrate, our customers develop smaller, more robust and more powerful devices to meet the challenges of tomorrow. We help Phonebloks by supporting their vision.",
+"FRIENDS_15_URL" : "http://www.ats.net",
+"FRIENDS_15_LOGO" : "/imgs/logo/ats.png",
+
+
+
+
 
 "PARTNER_PROGRAM_TITLE" : "Join us!",
 "PARTNER_PROGRAM_CONTENT" : "Next to all the support from individuals we are always trying to connect with companies that support the Phonebloks vision. We are building a hub of companies that all want to work in the same direction and we hope you are interested in joining us. We have set up a program to help us connect with the industry and connect the partnering companies with each other. The way we see it: The more partners that are onboard, the bigger the chance of success.",
