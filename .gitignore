@@ -1,3 +1,5 @@
 /logs/**
 /tmp/**
 \._*
+
+app/locale/en.json
