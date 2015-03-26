@@ -293,6 +293,7 @@ fieldset[disabled] .btn-inverted.active {
 }
 .icon-links a {
   color: #000;
+  opacity: 0.5;
 }
 
 @media (min-width: 992px){
