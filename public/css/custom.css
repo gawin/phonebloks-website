@@ -799,25 +799,25 @@ fieldset[disabled] .btn-inverted.active {
 @media (max-width: 1200px) {
 
     .dave-photo{
-      background: url('/imgs/v6-team.jpg') no-repeat 0 0;
+      background: url('/imgs/v5-team.jpg') no-repeat 0 0;
     }
     .gawin-photo{
-      background: url('/imgs/v6-team.jpg') no-repeat -200px 0;
+      background: url('/imgs/v5-team.jpg') no-repeat -200px 0;
     }
     .tomas-photo{
-      background: url('/imgs/v6-team.jpg') no-repeat -400px 0;
+      background: url('/imgs/v5-team.jpg') no-repeat -400px 0;
     }
     .sunny-photo{
-      background: url('/imgs/v6-team.jpg') no-repeat -600px 0;
+      background: url('/imgs/v5-team.jpg') no-repeat -600px 0;
     }
 	   .giulio-photo{
-      background: url('/imgs/v6-team.jpg') no-repeat -800px 0;
+      background: url('/imgs/v6-team.jpg') no-repeat -200px 0;
     }
     .gustavo-photo{
-      background: url('/imgs/v6-team.jpg') no-repeat -1000px 0;
+      background: url('/imgs/v6-team.jpg') no-repeat -400px 0;
     }
     .jeanbaptiste-photo{
-      background: url('/imgs/v6-team.jpg') no-repeat -1200px 0;
+      background: url('/imgs/v6-team.jpg') no-repeat -800px 0;
     }
     .teammember-photo{
       background-size: 800px 200px;
@@ -828,25 +828,25 @@ fieldset[disabled] .btn-inverted.active {
 }
 @media (min-width: 1200px) {
     .dave-photo{
-      background: url('/imgs/v6-team.jpg') no-repeat 0 0;
+      background: url('/imgs/v5-team.jpg') no-repeat 0 0;
     }
     .gawin-photo{
-      background: url('/imgs/v6-team.jpg') no-repeat -250px 0;
+      background: url('/imgs/v5-team.jpg') no-repeat -250px 0;
     }
     .tomas-photo{
-      background: url('/imgs/v6-team.jpg') no-repeat -500px 0;
+      background: url('/imgs/v5-team.jpg') no-repeat -500px 0;
     }
     .sunny-photo{
-      background: url('/imgs/v6-team.jpg') no-repeat -750px 0;
+      background: url('/imgs/v5-team.jpg') no-repeat -750px 0;
     }
 	   .giulio-photo{
-      background: url('/imgs/v6-team.jpg') no-repeat -1000px 0;
+      background: url('/imgs/v6-team.jpg') no-repeat 0 0;
     }
     .gustavo-photo{
-      background: url('/imgs/v6-team.jpg') no-repeat -1250px 0;
+      background: url('/imgs/v6-team.jpg') no-repeat -250px 0;
     }
     .jeanbaptiste-photo{
-      background: url('/imgs/v6-team.jpg') no-repeat -1500px 0;
+      background: url('/imgs/v6-team.jpg') no-repeat -500px 0;
     }
     .teammember-photo{
       width: 250px;
