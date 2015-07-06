@@ -1,1 +1,15 @@
+# Create a logs dir if it does not exist
+if [ ! -d "logs" ]; then
+  mkdir logs
+  echo "/logs dir created"
+fi
+
+# Create a tmp dir if it does not exist
+if [ ! -d "tmp" ]; then
+  mkdir tmp
+  echo "/tmp dir created"
+fi
+
 nginx -p `pwd`/ -c conf/nginx-dev.conf
+
+echo "Server should be running on http://localhost:8080"
