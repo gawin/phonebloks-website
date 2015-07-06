@@ -47,7 +47,7 @@ function table.set(t) -- set of list
 end
 
 local allowed_languages = table.set { "en", "nl"}
-local allowed_pages     = table.set { "about", "donate", "partners","index", "faq", "newsletter", "contact", "help-us"}
+local allowed_pages     = table.set { "about", "donate", "community", "partners","index", "faq", "newsletter", "contact", "help-us"}
 local url_language      = string.sub(ngx.var.uri, 2, 3)
 local url_page          = string.sub(ngx.var.uri, 5)
 
