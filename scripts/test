@@ -1,1 +1,1 @@
-nginx -p `pwd`/ -c conf/nginx-dev.conf -t
+nginx -p `pwd`/ -c conf/nginx.conf -t

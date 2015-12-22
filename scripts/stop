@@ -1,2 +1,2 @@
-nginx -p `pwd`/ -c conf/nginx-dev.conf -s stop
+nginx -p `pwd`/ -c conf/nginx.conf -s stop
 echo "Server stoped"

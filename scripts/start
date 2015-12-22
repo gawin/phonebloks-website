@@ -10,6 +10,6 @@ if [ ! -d "tmp" ]; then
   echo "/tmp dir created"
 fi
 
-nginx -p `pwd`/ -c conf/nginx-dev.conf
+nginx -p `pwd`/ -c conf/nginx.conf
 
 echo "Server should be running on http://localhost:8080"

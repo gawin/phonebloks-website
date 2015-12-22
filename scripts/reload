@@ -1,2 +1,2 @@
-nginx -p `pwd`/ -c conf/nginx-dev.conf -s reload
+nginx -p `pwd`/ -c conf/nginx.conf -s reload
 echo "Server reloaded"
